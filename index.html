@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File metadata</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <style>
+      body {
+        margin: 50px;
+        margin-left: 200px;
+        font-family: sans-serif;
+      }
+      .cont {
+        background: #E9ECEF;
+        display: inline-block;
+        padding: 20px;
+        padding-bottom: 5px;
+      }
+      div {
+        margin-bottom: 20px;
+      }
+      input {
+        margin-bottom: 12px;
+      }
+      @media (max-width: 600px){
+        body {
+          margin: 24px;
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+
+  <h1>File metadata micro-service</h1>
+    <!-- Post -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" value=""/>
+      <input type="submit" name="upload"/>
+    </form>
+    <!-- Usage -->
+    <p>
+      Usage
+    </p>
+    <div class="cont">
+      <p>
+        Click the button and select a file
+      </p>
+    </div>
+      <!-- Output -->
+    <p>
+      Output
+    </p>
+    <div class="cont">
+      <p>
+        {
+          "name": "my file",
+          "size": "1024 bytes"
+        }
+      </p>
+    </div>
+  </body>
+</html>
